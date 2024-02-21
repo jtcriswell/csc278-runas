@@ -1,8 +1,10 @@
-all: test
+CC := clang
 
-test: test.c
-	gcc -static -o test test.c
+all: runas
+
+runas: runas.c
+	$(CC) -static -o runas runas.c
 
 clean:
-	rm -f test
+	rm -f runas
 

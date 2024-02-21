@@ -8,7 +8,7 @@
  * Function: main()
  *
  * Description:
- *   Entry point for this program.
+ *   Entry point for the runas program.
  *
  * Inputs:
  *   argc - The number of argument with which this program was executed.
@@ -20,7 +20,7 @@
 int
 main (int argc, char ** argv) {
 	/* Print a friendly message */
-	printf ("Test programf for QEMU!\n");
+	printf ("Test program for QEMU!\n");
 
 	/* Exit the program */
 	return 0;
