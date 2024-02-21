@@ -1,7 +1,7 @@
 # runas
 Files for the runas program assignment
 
-This repository contains the helper scripts for MP1 for CSC 292/572.
+This repository contains the helper scripts for the runas project for CSC 278/478.
 
 Students will need the QEMU emulator and the OpenWRT hard disk image. The getfiles.sh script will download and unpack these files from the course web page. In case students want to get the files by hand, the information is below:
 
