@@ -1,0 +1,37 @@
+#!/bin/sh
+
+#
+# Script: configruas
+#
+# Description:
+#   This script copies the runas program from the floppy disk to the hard disk
+#   and configures the file attributes of the runas executable and the runaslog
+#   log file.
+#
+
+#
+# Copy the runas program from the virtual floppy disk to the hard disk.
+# We need to do this as the floppy disk uses the MS-DOS format, and MS-DOS
+# filesystems do not support Unix owners, groups, or mode bits.
+#
+cp /mnt/runas /runas
+
+#
+# Configure the owner, group, and mode (permission bits) of the runas
+# executable.  Note that the default permissions provided by the instructor
+# are wrong.
+#
+chmod 000 /runas
+
+#
+# Create the runas log file if it does not already exist.
+#
+touch /var/tmp/runaslog
+
+#
+# Configure the owner, group, and mode (permission bits) of the runas
+# log file.  Note that the default permissions provided by the instructor
+# are not the best one can do.
+#
+chmod 000 /var/tmp/runaslog
+chown root /var/tmp/runaslog
