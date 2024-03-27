@@ -4,6 +4,8 @@
 #include <linux/unistd.h>
 #include <sys/syscall.h>
 
+#include "priv.h"
+
 /*
  * Function: main()
  *
@@ -21,6 +23,9 @@ int
 main (int argc, char ** argv) {
 	/* Print a friendly message */
 	printf ("Test program for QEMU!\n");
+
+	priv_raise (1, CAP_FOWNER);
+	priv_lower (1, CAP_FOWNER);
 
 	/* Exit the program */
 	return 0;
